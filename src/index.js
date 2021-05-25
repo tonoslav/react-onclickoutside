@@ -97,7 +97,12 @@ export default function onClickOutsideHOC(WrappedComponent, config) {
         return instance.setClickOutsideRef();
       }
 
-      return findDOMNode(instance);
+      try {
+        return findDOMNode(instance);
+      } catch (e) {
+        console.log(e);
+      }
+      return null;
     };
 
     /**

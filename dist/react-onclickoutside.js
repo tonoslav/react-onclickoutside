@@ -199,7 +199,11 @@ function onClickOutsideHOC(WrappedComponent, config) {
           return instance.setClickOutsideRef();
         }
 
-        return reactDom.findDOMNode(instance);
+        try {
+          return reactDom.findDOMNode(instance);
+        } catch (e) {}
+
+        return null;
       };
 
       _this.enableOnClickOutside = function () {
