@@ -201,9 +201,7 @@ function onClickOutsideHOC(WrappedComponent, config) {
 
         try {
           return reactDom.findDOMNode(instance);
-        } catch (e) {
-          console.log(e);
-        }
+        } catch (e) {}
 
         return null;
       };
