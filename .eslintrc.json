@@ -32,6 +32,7 @@
       "error",
       "single"
     ],
+    "no-empty": ["error", { "allowEmptyCatch": true }],
     "semi": [
       "error",
       "always"

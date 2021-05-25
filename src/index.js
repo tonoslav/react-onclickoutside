@@ -99,9 +99,7 @@ export default function onClickOutsideHOC(WrappedComponent, config) {
 
       try {
         return findDOMNode(instance);
-      } catch (e) {
-        console.log(e);
-      }
+      } catch (e) {}
       return null;
     };
 
